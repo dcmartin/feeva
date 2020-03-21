@@ -140,4 +140,4 @@ David C Martin (github@dcmartin.com)
 ## Stargazers
 [![Stargazers over time](https://starchart.cc/dcmartin/open-horizon.svg)](https://starchart.cc/dcmartin/open-horizon)
 
-<img width="1" src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=4_6u9ZtuESd3A0d5QqolIXyKjPsndgIZ57I5oc8Wzog'/>
+<img width="1" src="//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=FuWjgWyZCz62bThPqILnRRAAyfFhKtoQAnM_K1BWcCI"/>
