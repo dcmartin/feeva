@@ -60,7 +60,7 @@ The OLED display connects to the `GPIO` pins on the RaspberryPi using the provid
 
 <img src="docs/rgb-oled-gpio.png"  width="95%">
 
-The manufacturer provided diagram below indicates the **RED** cable be attached to _PIN 1_ and the **BLACK** cable to _PIN 6_; however, to connect the thermal sensor alternatives are recommended; seel table below.
+The manufacturer provided diagram below indicates the **RED** cable be attached to _PIN 1_ and the **BLACK** cable to _PIN 6_; to connect the thermal sensor alternatives are recommended; see table below.
 
 <img src="docs/rgb-oled.jpg" height="512">
 
