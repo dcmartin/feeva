@@ -118,8 +118,26 @@ make
 make start
 ```
 
-# Reference
+#  Further Information 
 
-## RaspberryPi `GPIO`
+## RaspberryPi `GPIO` reference
 
 <img src="docs/rpi-gpio.png" width="50%">
+
+# Changelog & Releases
+
+Releases are based on Semantic Versioning, and use the format
+of ``MAJOR.MINOR.PATCH``. In a nutshell, the version will be incremented
+based on the following:
+
+- ``MAJOR``: Incompatible or major changes.
+- ``MINOR``: Backwards-compatible new features and enhancements.
+- ``PATCH``: Backwards-compatible bugfixes and package updates.
+
+## Authors & contributors
+
+David C Martin (github@dcmartin.com)
+## Stargazers
+[![Stargazers over time](https://starchart.cc/dcmartin/open-horizon.svg)](https://starchart.cc/dcmartin/open-horizon)
+
+<img width="1" src='//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=4_6u9ZtuESd3A0d5QqolIXyKjPsndgIZ57I5oc8Wzog'/>
