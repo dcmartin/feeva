@@ -9,6 +9,20 @@ Perform facial detection and provide thermal measurement for humans.  Put in bat
 
 # &#128679; `UNDER CONSTRUCTION` &#128679;
 
+# Status
+
+![](https://img.shields.io/github/license/dcmartin/feeva.svg?style=flat)
+![](https://img.shields.io/github/release/dcmartin/feeva.svg?style=flat)
+[![Build Status](https://travis-ci.org/dcmartin/feeva.svg?branch=master)](https://travis-ci.org/dcmartin/feeva)
+[![Coverage Status](https://coveralls.io/repos/github/dcmartin/feeva/badge.svg?branch=master)](https://coveralls.io/github/dcmartin/feeva?branch=master)
+
+![](https://img.shields.io/github/repo-size/dcmartin/feeva.svg?style=flat)
+![](https://img.shields.io/github/last-commit/dcmartin/feeva.svg?style=flat)
+![](https://img.shields.io/github/commit-activity/w/dcmartin/feeva.svg?style=flat)
+![](https://img.shields.io/github/contributors/dcmartin/feeva.svg?style=flat)
+![](https://img.shields.io/github/issues/dcmartin/feeva.svg?style=flat)
+![](https://img.shields.io/github/tag/dcmartin/feeva.svg?style=flat)
+
 ## Parts
 
 + RaspberryPi Model 3/4
@@ -60,7 +74,7 @@ The OLED display connects to the `GPIO` pins on the RaspberryPi using the provid
 
 <img src="docs/rgb-oled-gpio.png"  width="95%">
 
-The manufacturer provided diagram below indicates the **RED** cable be attached to _PIN 1_ and the **BLACK** cable to _PIN 6_; however, to connect the thermal senso; recommended alternatives are listed in the table.
+The manufacturer provided diagram below indicates the **RED** cable be attached to _PIN 1_ and the **BLACK** cable to _PIN 6_; to connect the thermal sensor alternatives are recommended; see table below.
 
 <img src="docs/rgb-oled.jpg" height="512">
 
@@ -138,6 +152,6 @@ based on the following:
 
 David C Martin (github@dcmartin.com)
 ## Stargazers
-[![Stargazers over time](https://starchart.cc/dcmartin/open-horizon.svg)](https://starchart.cc/dcmartin/open-horizon)
+[![Stargazers over time](https://starchart.cc/dcmartin/feeva.svg)](https://starchart.cc/dcmartin/feeva)
 
 <img width="1" src="//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=n&d=FuWjgWyZCz62bThPqILnRRAAyfFhKtoQAnM_K1BWcCI"/>
