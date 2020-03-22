@@ -9,6 +9,20 @@ Perform facial detection and provide thermal measurement for humans.
 
 # &#128679; `UNDER CONSTRUCTION` &#128679;
 
+# Status
+
+![](https://img.shields.io/github/license/dcmartin/feeva.svg?style=flat)
+![](https://img.shields.io/github/release/dcmartin/feeva.svg?style=flat)
+[![Build Status](https://travis-ci.org/dcmartin/feeva.svg?branch=master)](https://travis-ci.org/dcmartin/feeva)
+[![Coverage Status](https://coveralls.io/repos/github/dcmartin/feeva/badge.svg?branch=master)](https://coveralls.io/github/dcmartin/feeva?branch=master)
+
+![](https://img.shields.io/github/repo-size/dcmartin/feeva.svg?style=flat)
+![](https://img.shields.io/github/last-commit/dcmartin/feeva.svg?style=flat)
+![](https://img.shields.io/github/commit-activity/w/dcmartin/feeva.svg?style=flat)
+![](https://img.shields.io/github/contributors/dcmartin/feeva.svg?style=flat)
+![](https://img.shields.io/github/issues/dcmartin/feeva.svg?style=flat)
+![](https://img.shields.io/github/tag/dcmartin/feeva.svg?style=flat)
+
 ## Parts
 
 + RaspberryPi Model 3/4
