@@ -1,5 +1,5 @@
 # &#x1F321; - `feeva`
-Perform facial detection and provide thermal measurement for humans.
+Perform facial detection and provide thermal measurement for humans.  Put in bathroom for automated and touchless temperature estimation.
 
 2. Use `raspi-config` to enable `I2C` interface
 6. Connect display, camera, and thermal sensor
