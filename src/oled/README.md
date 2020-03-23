@@ -1,12 +1,27 @@
 # `oled/README.md`
 
-## Enable `python`
+## Build
+Run the `make` command in the `oled/` directory to build the `main` executable.  This program will run a series of tests to ensure proper installation, connection, and operation of the OLED display; for example
+
+
+```
+make
+```
+
+## `python` pre-requisites
 Python libraries included require two additional packages to be installed using `pip`, for example:
 
 ```
 sudo apt install -qq -y python-pip
 sudo pip install Rpi.GPIO
 sudo pip install spidev
+```
+
+Test using the provided `main.py`, for example:
+
+```
+cd python
+sudo python main.py
 ```
 
 ## Download `BCM2835` (optional)
