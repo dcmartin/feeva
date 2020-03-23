@@ -15,6 +15,7 @@ Python libraries included require two additional packages to be installed using 
 sudo apt install -qq -y python-pip
 sudo pip install Rpi.GPIO
 sudo pip install spidev
+sudo pip install pillow
 ```
 
 Test using the provided `main.py`, for example:
