@@ -12,17 +12,19 @@ make
 Python libraries included require two additional packages to be installed using `pip`, for example:
 
 ```
-sudo apt install -qq -y python-pip
-sudo pip install Rpi.GPIO
-sudo pip install spidev
-sudo pip install pillow
+sudo apt install -qq -y python3-pip
+sudo python3 -m pip install --upgrade pip
+sudo python3 -m pip install --upgrade RPi.GPIO
+sudo python3 -m pip install --upgrade spidev
+sudo python3 -m pip install --upgrade Pillow
 ```
 
-Test using the provided `main.py`, for example:
+Ensure the `/dev/spidev0.0` device exists; if not, please run `raspi-config` and enable the `SPI` interface.  Test using the provided `main.py`, for example:
 
 ```
+ls -l /dev/spidev.0.0
 cd python
-sudo python main.py
+sudo python3 main.py
 ```
 
 ## Download `BCM2835` (optional)
