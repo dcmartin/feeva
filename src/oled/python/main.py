@@ -4,7 +4,7 @@
 import RPi.GPIO as GPIO
 import OLED_Driver as OLED
 #--------------Image Library---------------#
-from PIL  import Image
+from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 from PIL import ImageColor
