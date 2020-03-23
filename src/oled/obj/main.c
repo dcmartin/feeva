@@ -35,6 +35,7 @@ int main(int argc, char **argv)
     Display_Interface();
     DEV_Delay_ms(3000);
     Clear_Screen();
+/*
 
     Set_Color(RED);
     print_String(0, 0, "Hello World !", FONT_5X8);
@@ -69,7 +70,7 @@ int main(int argc, char **argv)
 
     testtriangles();
     DEV_Delay_ms(1000);
-
+*/
     Display_bmp();
 
     DEV_Delay_ms(1000);

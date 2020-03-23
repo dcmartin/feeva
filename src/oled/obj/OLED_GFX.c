@@ -359,12 +359,23 @@ void Display_bmp(void) {
   RAM_Address();
   Write_Command(0x5C);
   
+
+#ifdef FIEBRE
   for( ; i < 128*128*2; i+=2)  {
-    color_byte[0] = gImage_bmp2[i];
-    color_byte[1] = gImage_bmp2[i+1];
+    color_byte[0] = fiebre_icon[i];
+    color_byte[1] = fiebre_icon[i+1];
     Write_Data(color_byte[0]);
     Write_Data(color_byte[1]);
   }
+#endif /* FIEBRE */
+
+  for( ; i < 128*128*2; i+=2)  {
+    color_byte[0] = gImage_bmp3[i];
+    color_byte[1] = gImage_bmp3[i+1];
+    Write_Data(color_byte[0]);
+    Write_Data(color_byte[1]);
+  }
+
 }
 
 

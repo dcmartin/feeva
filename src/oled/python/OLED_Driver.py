@@ -1,6 +1,6 @@
  # -*- coding:UTF-8 -*-
 
-import spidev
+import spidev as spidev from spidev
 
 import RPi.GPIO as GPIO
 

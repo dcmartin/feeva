@@ -9,4 +9,6 @@ const unsigned char gImage_bmp1[32768];
 const unsigned char gImage_bmp2[32768];
 const unsigned char gImage_bmp3[32768];
 
+#include "fiebre.h"
+
 #endif /*__ASCII_CODE__8X16_5X8_VERTICAL_H*/
