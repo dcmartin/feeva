@@ -70,26 +70,19 @@ Serial clock|5|YELLOW|`SCL`
 Ground|9|BLACK|`GND`
 
 ##  Step 3 - Connect OLED display connection
-The OLED display connects to the `GPIO` pins on the RaspberryPi using the provided cable which attaches the side of the OLED display; see below.
-
-<img src="docs/rgb-oled-gpio.png"  width="95%">
-
-The manufacturer provided diagram below indicates the **RED** cable be attached to _PIN 1_ and the **BLACK** cable to _PIN 6_; to connect the thermal sensor alternatives are recommended; see table below.
-
-<img src="docs/rgb-oled.jpg" height="512">
-
-### `GPIO` connections
+The OLED display connects to the `GPIO` pins on the RaspberryPi using the provided cable which attaches the side of the OLED display; see table and image below.
 
 Raspberry Pi|PIN|Color|RGB OLED|
 ---|---|---|---|
-3.3V current|17|RED|`VCC`|	
-Ground|20|BLACK|`GND`|
-`MOSI`|18|BLUE|`DIN`|	
-`SCLK`|19|YELLOW|`CLK`|	
-`CE0`|24|ORANGE|`CS`|	
+3.3V current|17|RED|`VCC`|
 `GPIO24`|18|GREEN|`DC`|
-`GPIO25`|22|GRAY|`RST`|	
+`MOSI`|19|BLUE|`DIN`|	
+Ground|20|BLACK|`GND`|
+`GPIO25`|22|WHITE|`RST`|	
+`SCLK`|23|YELLOW|`CLK`|	
+`CE0`|24|ORANGE|`CS`|	
 
+<img src="src/oled/docs/gpio-cable-connect.png" width="50%">
 
 ## Step 4 - Connect V2 camera module
 Install the Raspberry Pi Camera module by inserting the cable into the Raspberry Pi.

@@ -1,31 +1,67 @@
 # `oled/README.md`
 
-## Build
-Run the `make` command in the `oled/` directory to build the `main` executable.  This program will run a series of tests to ensure proper installation, connection, and operation of the OLED display; for example
+## Connect
+Connect the OLED panel to the RaspberryPi using the provided cable; colors indicated in the image below are referenced in the following table; use the following `GPIO` pins.
 
+Raspberry Pi|PIN|Color|RGB OLED|
+---|---|---|---|
+3.3V current|17|RED|`VCC`|
+`GPIO24`|18|GREEN|`DC`|
+`MOSI`|19|BLUE|`DIN`|	
+Ground|20|BLACK|`GND`|
+`GPIO25`|22|WHITE|`RST`|	
+`SCLK`|23|YELLOW|`CLK`|	
+`CE0`|24|ORANGE|`CS`|	
+
+<img src="docs/gpio-cable-connect.png" width="50%">
+
+## Build & test
+Run the `make` command to build the `main` executable.  This program will run a series of tests to ensure proper installation, connection, and operation of the OLED display; for example
 
 ```
 make
 ```
 
-## `python` pre-requisites
-Python libraries included require two additional packages to be installed using `pip`, for example:
+## Install for `python`
+The provided Python libraries require additional packages to be installed; these packages must be installed using `pip` command.  Install the `pip` command as follows:
 
 ```
 sudo apt install -qq -y python3-pip
 sudo python3 -m pip install --upgrade pip
+```
+
+Then install the required packages; for example:
+
+```
 sudo python3 -m pip install --upgrade RPi.GPIO
 sudo python3 -m pip install --upgrade spidev
 sudo python3 -m pip install --upgrade Pillow
 ```
 
-Ensure the `/dev/spidev0.0` device exists; if not, please run `raspi-config` and enable the `SPI` interface.  Test using the provided `main.py`, for example:
+Ensure the `/dev/spidev0.0` device exists and set permissions for general access:
+
+```
+ls -al /dev/spidev0.0 && sudo chmod 666 /dev/spidev0.0 || echo "/dev/spidev.0.0 does not exist"
+```
+
+If the devices does not exist, please run `raspi-config` and enable the `SPI` interface.; for example:
+
+```
+sudo raspi-config
+```
+
+### Test `python`
+
+Test using the provided `main.py`, for example:
 
 ```
 ls -l /dev/spidev.0.0
 cd python
-sudo python3 main.py
+python3 main.py
 ```
+
+# Source Material
+The following are the original sources utilized to build this component.
 
 ## Download `BCM2835` (optional)
 Open Raspberry Pi terminal, and run the following commands:
