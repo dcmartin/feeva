@@ -1,7 +1,15 @@
-# `SOFTWARE.md`
+# `oled/README.md`
 
+## Enable `python`
+Python libraries included require two additional packages to be installed using `pip`, for example:
 
-## `BCM2835`
+```
+sudo apt install -qq -y python-pip
+sudo pip install Rpi.GPIO
+sudo pip install spidev
+```
+
+## Download `BCM2835` (optional)
 Open Raspberry Pi terminal, and run the following commands:
 
 ```
@@ -16,26 +24,23 @@ sudo make install
 
 Refer to the official website: http://www.airspayce.com/mikem/bcm2835/
 
-## WiringPi
+## Install `wiringpi` (optional)
+To install WiringPi which is an option in the OLED driver software; see the `makefile`
 
 ```
 sudo apt install -qq -y wiringpi
 wget https://project-downloads.drogon.net/wiringpi-latest.deb
 sudo dpkg -i wiringpi-latest.deb
-gpio -v
+```
+
+Test installation, for example:
+
+```
 # Run gpio -v version 2.52 will appear, if there is no description, installation error
+gpio -v
 ```
 
-## Python
-
-```
-sudo apt install -qq -y python-pip
-sudo pip install Rpi.GPIO
-sudo pip install spidev
-```
-
-
-## Copy drivers
+## Download original drivers (optional)
 Download the drivers and test the assembly and installation of the OLED display.  
 The `main` program will display a demonstration on the screen verifying proper installation.
 
@@ -50,7 +55,7 @@ chmod 777 ./main
 sudo ./main
 ```
 
-## Optional - clone repository
+## Clone original repository (optional)
 
 ```
 git clone https : //github.com/waveshare/1.5inch-RGB-OLED-Module
