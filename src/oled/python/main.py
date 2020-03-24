@@ -174,6 +174,8 @@ try:
             OLED.Delay(2000)
             Display_Picture("picture3.jpg")
             OLED.Delay(2000)
+            Display_Picture("picture4.jpg")
+            OLED.Delay(2000)
 
 
     if __name__ == '__main__':

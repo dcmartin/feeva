@@ -50,6 +50,15 @@ If the devices does not exist, please run `raspi-config` and enable the `SPI` in
 sudo raspi-config
 ```
 
+## Enable access
+Apparently adding all these groups still does not cover the necessary access privileges for the various required components.
+
+```
+sudo addgroup ${USER} video
+sudo addgroup ${USER} gpio
+sudo addgroup ${USER} spi
+sudo addgroup ${USER} i2c
+```
 ### Test `python`
 
 Test using the provided `main.py`, for example:
@@ -57,7 +66,7 @@ Test using the provided `main.py`, for example:
 ```
 ls -l /dev/spidev.0.0
 cd python
-python3 main.py
+sudo python3 main.py
 ```
 
 # Source Material
