@@ -9,8 +9,6 @@ DIR_BIN = ./bin
 OBJ_C = $(wildcard ${DIR_FONTS}/*.c ${DIR_OBJ}/*.c)
 OBJ_O = $(patsubst %.c,${DIR_BIN}/%.o,$(notdir ${OBJ_C}))
 
-TARGET := main
-
 CC := gcc
 
 CFLAGS := -g -O0 -Wall
@@ -27,6 +25,7 @@ else ifeq ($(USELIB), USE_WIRINGPI_LIB)
     LIB = -lwiringPi
 endif
 
+TARGET += main
 CFLAGS += -D$(USELIB)
 LIB += -lm
 
@@ -36,9 +35,9 @@ wiringpi:
 	sudo apt install -qq -y wiringpi
 
 bcm2835:
-	cd bcm2835-1.60 && ./configure && make && sudo make install
+	cd bcm2835-1.60 && sudo ./setup.sh
 
-${TARGET}: $(OBJ_O)
+main: $(OBJ_O)
 	$(CC) $(CFLAGS) $(OBJ_O) -o $@ $(LIB)
 
 ${DIR_BIN}/%.o : $(DIR_OBJ)/%.c 

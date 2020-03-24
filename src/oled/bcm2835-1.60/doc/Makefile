@@ -123,7 +123,7 @@ AM_DEFAULT_VERBOSITY = 1
 AUTOCONF = ${SHELL} /home/dcmartin/GIT/feeva/src/oled/bcm2835-1.60/missing autoconf
 AUTOHEADER = ${SHELL} /home/dcmartin/GIT/feeva/src/oled/bcm2835-1.60/missing autoheader
 AUTOMAKE = ${SHELL} /home/dcmartin/GIT/feeva/src/oled/bcm2835-1.60/missing automake-1.16
-AWK = mawk
+AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
