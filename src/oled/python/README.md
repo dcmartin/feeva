@@ -3,8 +3,7 @@
 
 ## Basic
 ```
-sudo apt install -qq -y python3-numpy python3-matplotlib python-opencv libopencv-dev libatlas-base-dev libjasper-dev
-
+sudo apt install -qq -y python3-numpy python3-matplotlib python-opencv libopencv-dev libatlas-base-dev libjasper-dev libqtgui4
 sudo python3 -m pip install --upgrade numpy
 ```
 
