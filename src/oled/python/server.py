@@ -23,7 +23,7 @@ def Display_Picture(File_Name):
 
 ## v1/test/ API
 
-from flask import Flask, request
+from flask import Flask, request, jsonify
 webapp = Flask('oled')
 
 @webapp.route("/oled/v1/test/text", methods=['GET'])
@@ -167,35 +167,50 @@ def Test_Picture():
   Display_Picture("picture2.jpg")
   Display_Picture("picture3.jpg")
   Display_Picture("picture4.jpg")
-  return ('{"success": {"file": "%s"}}\n' % (File_Name))
+  return ('{"success": true}}\n' % ())
 
 ## POST
 
-import numpy as np
-import cv2
+import base64
+from io import BytesIO
 
 @webapp.route("/oled/v1/display/picture", methods=['POST'])
 def displayPicture():
-  r = request
-  nparr = np.fromstring(r.data, np.uint8)
-  img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-  OLED.Display_Image(image)
-  return ('{"success": true}\n' % ())
+  json_data = request.get_json(force=True)
+  if json_data != 'null':
+    b64data = json_data['image']
+    if b64data != 'null':
+      imageBytes = base64.b64decode(b64data)
+      if imageBytes != 'null':
+        stream = BytesIO(imageBytes)
+        if stream != 'null':
+          image = Image.open(stream).convert("RGBA")
+          if image != 'null':
+            imageSmall = image.resize((128, 128), Image.ANTIALIAS)
+            if imageSmall != 'null':
+              OLED.Display_Image(imageSmall)
+              return ('{"success": true}\n' % ())
+            else:
+              return ('{"error": "image failed to resize"}\n' % ())
+          else:
+            return ('{"error": "image bytes failed to stream"}\n' % ())
+        else:
+          return ('{"error": "image string failed to decode"}\n' % ())
+      else:
+        return ('{"error": "image bytes null"}\n' % ())
+    else:
+      return ('{"error": "image string null"}\n' % ())
+  else:
+    return ('{"error": "no JSON data received"}\n' % ())
 
 ###
 ### MAIN
 ###
 
-REST_API_BIND_ADDRESS = '0.0.0.0'
-REST_API_PORT = 7777
-
 try:
-  def main():
-    OLED.Device_Init()
-    webapp.run(host=REST_API_BIND_ADDRESS, port=REST_API_PORT)
-
   if __name__ == '__main__':
-    main()
+    OLED.Device_Init()
+    webapp.run(debug=False,host='0.0.0.0',port=7777)
 
 except:
   OLED.Clear_Screen()
